@@ -3,22 +3,24 @@
 
 #include<stdlib.h>
 
-int* selectionSort(int* table, size_t size)
+int insertionSort(int* table, size_t size)
 {
-    int i=1;
-    int q;   
-    while(i<size)
+    int key;
+    for(int i=1; i<size; i++)
     {
-        q = table[i+1];
-        for(int j=i; j>=0; j--)
+        key = table[i];
+        int j = i-1;
+        while( key<table[j] && (j>=0))
         {
-            if(q<table[j])
-            {
-                
-            }
-
+            table[j+1] = table[j];
+            j--;
         }
+        table[j+1] = key;
     }
+ 
+    return 0;
+
+
 }
  
 
