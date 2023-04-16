@@ -1,12 +1,14 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include"InsertionSort.h"
+#include"MergeSort.h"
 
 int main()
 {
-    int table[]={5,4,3,2,1};
-    size_t len = 5;
-    printf("before: \t%i, %i, %i, %i, %i\n",table[0],table[1],table[2],table[3],table[4]);
-    insertionSort(table,len);
-    printf("after: \t%i, %i, %i, %i, %i\n",table[0],table[1],table[2],table[3],table[4]);
+    int tab[] = {1,4,15,16,2,3,7,8,9};
+    merge(tab, 0,8,3);
+    for(int i = 0; i<9 ;i++)
+    {
+        printf("%i ", tab[i]);
+    }
+    printf("\n");
 }
