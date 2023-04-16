@@ -34,8 +34,6 @@ int* merge(int tab[static 1], int start, int stop, int div)
             k++;
         }
     }
-
-
 }
 
 
