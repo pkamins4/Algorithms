@@ -21,7 +21,7 @@ int* merge(int tab[static 1], int start, int stop, int div)
     L[len_L] = INT_MAX;
     R[len_R] = INT_MAX;
 
-    for(int i = 0, j=0, k=0; i <= stop; i++)
+    for(int i = start, j=0, k=0; i <= stop; i++)
     {
         if(L[j]<R[k])
         {
@@ -36,6 +36,17 @@ int* merge(int tab[static 1], int start, int stop, int div)
     }
 }
 
+void mergeSort(int tab[static 1], int start, int stop)
+{
+    if(start < stop)
+    {
+        int div = (stop + start)/2;
+        mergeSort(tab, start, div);
+        mergeSort(tab, div+1, stop);
+        merge(tab, start, stop, div);
+    }
+    
+}
 
 
 #endif 
