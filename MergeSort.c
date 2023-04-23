@@ -1,6 +1,36 @@
-#ifndef MERGE_SORT
-#define MERGE_SORT
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 #include <limits.h>
+
+#define LENGTH 10
+
+void merge(int tab[static 1], int start, int stop, int div);
+void mergeSort(int tab[static 1], int start, int stop);
+
+int main()
+{
+    srand(time(NULL));
+    int tab[LENGTH];
+    for(int i=0; i<LENGTH; i++)
+    {
+        tab[i] = (rand()%100);
+    }
+
+    for(int i=0; i<LENGTH; i++)
+    {
+        printf("%i, ", tab[i]);
+    }
+    printf("\n");
+    mergeSort(tab, 0, LENGTH-1);
+    for(int i=0; i<LENGTH; i++)
+    {
+        printf("%i, ", tab[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
 void merge(int tab[static 1], int start, int stop, int div)
 {
     int len_L = div - start + 1;
@@ -46,6 +76,3 @@ void mergeSort(int tab[static 1], int start, int stop)
     }
     
 }
-
-
-#endif 
