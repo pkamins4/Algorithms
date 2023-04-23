@@ -1,8 +1,7 @@
 #ifndef MERGE_SORT
 #define MERGE_SORT
 #include <limits.h>
-
-int* merge(int tab[static 1], int start, int stop, int div)
+void merge(int tab[static 1], int start, int stop, int div)
 {
     int len_L = div - start + 1;
     int len_R = stop - div;

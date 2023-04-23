@@ -22,9 +22,4 @@ int insertionSort(int* table, size_t size)
 
 
 }
- 
-
-
-
-
 #endif
