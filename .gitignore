@@ -1,3 +1,4 @@
 *.out
 .vscode
+README.md
 main.c
